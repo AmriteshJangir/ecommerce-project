@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Helper Auto-Assignment</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Smart Helper Auto-Assignment System</h1>
+    <p class="subtitle">Book house help and auto-assign nearest available helper in seconds.</p>
+
+    <section class="card">
+      <h2>Book a Service</h2>
+      <form id="booking-form">
+        <label>
+          User Name
+          <input type="text" id="user-name" required />
+        </label>
+
+        <label>
+          Service Type
+          <select id="service-type" required></select>
+        </label>
+
+        <div class="row">
+          <label>
+            User Latitude
+            <input type="number" id="user-latitude" step="0.0001" value="28.6135" required />
+          </label>
+
+          <label>
+            User Longitude
+            <input type="number" id="user-longitude" step="0.0001" value="77.2090" required />
+          </label>
+        </div>
+
+        <button type="submit">Book Service</button>
+      </form>
+
+      <div id="booking-result" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>Helpers</h2>
+      <p>Update helper status, GPS, and auto-response (for reject/no-response reassignment demo).</p>
+      <div id="helpers-list" class="helpers-list"></div>
+    </section>
+
+    <section class="card">
+      <h2>Recent Requests</h2>
+      <div id="requests-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
