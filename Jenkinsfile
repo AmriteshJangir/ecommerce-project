@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'NodeJS'
+    }
+
     stages {
 
         stage('Checkout') {
@@ -18,6 +22,8 @@ pipeline {
 
         stage('Build') {
             steps {
+                sh 'node -v'
+                sh 'npm -v'
                 echo 'Build completed successfully'
             }
         }
