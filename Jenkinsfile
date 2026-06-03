@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'NodeJS'
-    }
-
     stages {
 
         stage('Checkout') {
@@ -22,7 +18,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Build completed'
+                echo 'Build completed successfully'
             }
         }
 
